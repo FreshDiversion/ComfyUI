@@ -92,7 +92,7 @@ CONTROLNET_MODELS=(
 )
 
 CLIP_MODELS=(
-    #"https://huggingface.co/h94/IP-Adapter/resolve/main/models/image_encoder/model.safetensors"
+    "https://huggingface.co/h94/IP-Adapter/resolve/main/models/image_encoder/model.safetensors"
 )
 
 IPADAPTER_MODELS=(
@@ -131,7 +131,7 @@ function provisioning_start() {
         "${WORKSPACE}/storage/stable_diffusion/models/esrgan" \
         "${ESRGAN_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/clip" \
+        "${WORKSPACE}/storage/stable_diffusion/models/clip_vision" \
         "${CLIP_MODELS[@]}"
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/ipadapter" \
