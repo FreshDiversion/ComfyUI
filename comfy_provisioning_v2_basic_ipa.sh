@@ -25,7 +25,7 @@ NODES=(
     "https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes"
     "https://github.com/WASasquatch/was-node-suite-comfyui"
     #"https://github.com/ltdrdata/ComfyUI-Impact-Pack"
-    
+    "https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved"
     "https://github.com/cubiq/ComfyUI_IPAdapter_plus"
 
 )
