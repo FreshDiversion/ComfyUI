@@ -1,0 +1,1135 @@
+{
+  "last_node_id": 63,
+  "last_link_id": 102,
+  "nodes": [
+    {
+      "id": 50,
+      "type": "Note",
+      "pos": {
+        "0": -847.40380859375,
+        "1": 1343.3487548828125
+      },
+      "size": {
+        "0": 623.7066040039062,
+        "1": 77.10920715332031
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Load VAE_Note",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "The Load VAE node can be used to load a specific VAE model, VAE models are used to encoding and decoding images to and from latent space. Although the Load Checkpoint node provides a VAE model alongside the diffusion model, sometimes it can be useful to use a specific VAE model."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 49,
+      "type": "VAELoader",
+      "pos": {
+        "0": -597.40380859375,
+        "1": 1233.3487548828125
+      },
+      "size": {
+        "0": 388.5171813964844,
+        "1": 58
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            96,
+            97
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "vae-ft-mse-840000-ema-pruned.safetensors"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 51,
+      "type": "Note",
+      "pos": {
+        "0": -837.4506225585938,
+        "1": 700.2960205078125
+      },
+      "size": {
+        "0": 277.7353210449219,
+        "1": 120.67736053466797
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Load_Image_Note",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "The Load Image node can be used to to load an image. Images can be uploaded by starting the file dialog or by dropping an image onto the node. Once the image has been uploaded they can be selected inside the node."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 52,
+      "type": "Note",
+      "pos": {
+        "0": -843,
+        "1": 240
+      },
+      "size": {
+        "0": 284.36328125,
+        "1": 68.73603820800781
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Image_Only_Checkpoint_Loader_Note",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Load the SVD model"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 41,
+      "type": "Note",
+      "pos": {
+        "0": 159.22528076171875,
+        "1": 567.1546630859375
+      },
+      "size": {
+        "0": 294.0148620605469,
+        "1": 58
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "motion_bucket:100\naugmentation level: 0.02"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 43,
+      "type": "Note",
+      "pos": {
+        "0": 155.22528076171875,
+        "1": 953.1546630859375
+      },
+      "size": {
+        "0": 314.8986511230469,
+        "1": 150.85276794433594
+      },
+      "flags": {
+        "pinned": false
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Width:SE\nHeight:SE\nVideo_frames: Number of total video frames\nMotion_bucket: larger = more motion/smaller = less\nFPS:SE\nAugmentation_level: The amount of noise added to the initial image. The higher it is, the more different the video is from the initial frame. Increase it when you use a video size different from the default."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 56,
+      "type": "Note",
+      "pos": {
+        "0": 960,
+        "1": 570
+      },
+      "size": {
+        "0": 326.9725646972656,
+        "1": 613.2736206054688
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "KSampler_Inputs_Note",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Model\nThe model used for denoising\n\nPositive\nThe positive conditioning.\n\nNegative\nThe negative conditioning.\n\nlatent_image\nThe latent that will be denoised.\n\nseed\nThe random seed used in creating the noise.\n\ncontrol_after_generate\nProvides the ability to change the seed number described above after each prompt. the node can randomize, increment, decrement or keep the seed number fixed.\n\nsteps\nThe number of steps to use during denoising. The more steps the sampler is allowed to make the more accurate the result will be. See the samplers page for good guidelines on how to pick an appropriate number of steps.\n\ncfg\nThe classifier free guidance(cfg) scale determines how aggressive the sampler should be in realizing the content of the prompts in the final image. Higher scales force the image to better represent the prompt, but a scale that is set too high will negatively impact the quality of the image.\n\nsampler_name\nWhich sampler to use, see the samplers page for more details on the available samplers.\n\nscheduler\nThe type of schedule to use, see the samplers page for more details on the available schedules.\n\ndenoise\nHow much information of the latents should be erased by noise."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 38,
+      "type": "KSampler",
+      "pos": {
+        "0": 950,
+        "1": 230
+      },
+      "size": {
+        "0": 315,
+        "1": 262
+      },
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 100,
+          "slot_index": 0
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 86,
+          "slot_index": 1
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 87
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 88,
+          "slot_index": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            90
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        863404485433023,
+        "randomize",
+        35,
+        3.1,
+        "euler",
+        "karras",
+        0.85
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 54,
+      "type": "Note",
+      "pos": {
+        "0": 970,
+        "1": -20
+      },
+      "size": {
+        "0": 275.40594482421875,
+        "1": 189.3282470703125
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "KSampler_Note",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "The KSampler uses the provided model and positive and negative conditioning(PROMPTS) to generate a new version of the given latent. First the latent is noised up according to the given SEED and DENOISE strength, erasing some of the latent image. then this noise is removed using the given MODEL and the positive and negative conditioning as guidance, \"dreaming\" up new details in places where the image was erased by noise."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 48,
+      "type": "Reroute",
+      "pos": {
+        "0": 1159,
+        "1": 1236
+      },
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 97
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            95
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": true,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 58,
+      "type": "Note",
+      "pos": {
+        "0": 2790,
+        "1": 236.98182678222656
+      },
+      "size": {
+        "0": 333.4231872558594,
+        "1": 452.9917907714844
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Video_Combine_Params_Note",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "frame_rate: How many of the input frames are displayed per second. A higher frame rate means that the output video plays faster and has less duration. This should usually be kept to 8 for AnimateDiff, or matched to the force_rate of a Load Video node.\n\nloop_count: How many additional times the video should repeat\n\nfilename_prefix: The base file name used for output.\nYou can save output to a subfolder: subfolder/video\n\nformat: The file format to use. \n\npix_fmt: Changes how the pixel data is stored. yuv420p10le has higher color quality, but won't work on all devices\n\ncrf: Describes the quality of the output video. A lower number gives a higher quality video and a larger file size, while a higher number gives a lower quality video with a smaller size. \n\nsave_metadata: Includes a copy of the workflow in the ouput video which can be loaded by dragging and dropping the video, just like with images.\n\npingpong: Causes the input to be played back in the reverse to create a clean loop.\n\nsave_output: Whether the image should be put into the output directory or the temp directory.\n\nhttps://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 59,
+      "type": "Note",
+      "pos": {
+        "0": 2460,
+        "1": 66.9818115234375
+      },
+      "size": {
+        "0": 298.1440734863281,
+        "1": 94.94464111328125
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Video_Combine_Note",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Combines a series of images into an output video\n\nIf the optional audio input is provided, it will also be combined into the output video"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 45,
+      "type": "Note",
+      "pos": {
+        "0": 140,
+        "1": -10
+      },
+      "size": {
+        "0": 303.67742919921875,
+        "1": 65.63109588623047
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Deafult_Values_Note",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "min_cfg:2.0(default)"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 44,
+      "type": "Note",
+      "pos": {
+        "0": 141,
+        "1": 231
+      },
+      "size": {
+        "0": 306.2518615722656,
+        "1": 132.13978576660156
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "min_cfg: Sets the CFG scale at the beginning of the video. The CFG scale changes linearly to the cfg value defined in the KSampler node at the end of the video. In this example, min_cfg is set to 1.0, and cfg is set to 2.5. The CFG scale is 1.0 for the first frame, 2.5 for the last frame, and varies linearly in between. The more further away from the first frame, the higher CFG scale it gets."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 61,
+      "type": "Note",
+      "pos": {
+        "0": 1818.19873046875,
+        "1": 109.58505249023438
+      },
+      "size": {
+        "0": 437.2339172363281,
+        "1": 58
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Interpolation_Note",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "builda a frame(s) between 2 existing frames to smooth the output video"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 14,
+      "type": "VideoLinearCFGGuidance",
+      "pos": {
+        "0": 131,
+        "1": 117
+      },
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 46
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            100
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VideoLinearCFGGuidance"
+      },
+      "widgets_values": [
+        1
+      ]
+    },
+    {
+      "id": 12,
+      "type": "SVD_img2vid_Conditioning",
+      "pos": {
+        "0": 149,
+        "1": 679
+      },
+      "size": {
+        "0": 315,
+        "1": 218
+      },
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip_vision",
+          "type": "CLIP_VISION",
+          "link": 24
+        },
+        {
+          "name": "init_image",
+          "type": "IMAGE",
+          "link": 41,
+          "slot_index": 1
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 96
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            86
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            87
+          ],
+          "slot_index": 1,
+          "shape": 3
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "links": [
+            88
+          ],
+          "slot_index": 2,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SVD_img2vid_Conditioning"
+      },
+      "widgets_values": [
+        1024,
+        576,
+        25,
+        30,
+        24,
+        0.08
+      ]
+    },
+    {
+      "id": 55,
+      "type": "Note",
+      "pos": {
+        "0": 1405,
+        "1": 325
+      },
+      "size": {
+        "0": 267.73931884765625,
+        "1": 86.66159057617188
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "VAE_Decode_Note",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "The VAE Decode node decodes latent space images back into pixel space images, using the provided VAE."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 60,
+      "type": "Note",
+      "pos": {
+        "0": -866,
+        "1": -284
+      },
+      "size": {
+        "0": 418.3364562988281,
+        "1": 98.3526382446289
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Workflow_Note",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Basic_SVD_workflow\n\nThis workflow uses Stable Diffusion Stable Video Diffusion (SVD) model to generate a video from an image"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 23,
+      "type": "LoadImage",
+      "pos": {
+        "0": -532.0001220703125,
+        "1": 699.2960205078125
+      },
+      "size": {
+        "0": 315,
+        "1": 314.0000305175781
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            41
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "IMG_9134.jpg",
+        "image"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 15,
+      "type": "ImageOnlyCheckpointLoader",
+      "pos": {
+        "0": -543,
+        "1": 234
+      },
+      "size": {
+        "0": 369.6000061035156,
+        "1": 98
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            46
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "CLIP_VISION",
+          "type": "CLIP_VISION",
+          "links": [
+            24
+          ],
+          "slot_index": 1,
+          "shape": 3
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [],
+          "slot_index": 2,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageOnlyCheckpointLoader"
+      },
+      "widgets_values": [
+        "svd_xt.safetensors"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 26,
+      "type": "VHS_VideoCombine",
+      "pos": {
+        "0": 2426,
+        "1": 231.98182678222656
+      },
+      "size": [
+        341.9654235839844,
+        505.1055507659912
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 102
+        },
+        {
+          "name": "audio",
+          "type": "VHS_AUDIO",
+          "link": null
+        },
+        {
+          "name": "meta_batch",
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 20,
+        "loop_count": 0,
+        "filename_prefix": "SVD_",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 20,
+        "save_metadata": true,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "SVD__00001.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 20
+          }
+        }
+      }
+    },
+    {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": {
+        "0": 1409,
+        "1": 231
+      },
+      "size": {
+        "0": 261.3298645019531,
+        "1": 46
+      },
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 90
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 95
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            101
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 42,
+      "type": "Note",
+      "pos": {
+        "0": 597,
+        "1": 744
+      },
+      "size": {
+        "0": 210,
+        "1": 72.59086608886719
+      },
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "SVD_Default_Values_Note",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "steps:12\ncfg:2(default)\ndenoise:1.0(default)"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 63,
+      "type": "RIFE VFI",
+      "pos": {
+        "0": 1820.19873046875,
+        "1": 231.65184020996094
+      },
+      "size": {
+        "0": 478.8000183105469,
+        "1": 198
+      },
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "frames",
+          "type": "IMAGE",
+          "link": 101
+        },
+        {
+          "name": "optional_interpolation_states",
+          "type": "INTERPOLATION_STATES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            102
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RIFE VFI"
+      },
+      "widgets_values": [
+        "rife47.pth",
+        10,
+        2,
+        true,
+        true,
+        1
+      ]
+    }
+  ],
+  "links": [
+    [
+      24,
+      15,
+      1,
+      12,
+      0,
+      "CLIP_VISION"
+    ],
+    [
+      41,
+      23,
+      0,
+      12,
+      1,
+      "IMAGE"
+    ],
+    [
+      46,
+      15,
+      0,
+      14,
+      0,
+      "MODEL"
+    ],
+    [
+      86,
+      12,
+      0,
+      38,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      87,
+      12,
+      1,
+      38,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      88,
+      12,
+      2,
+      38,
+      3,
+      "LATENT"
+    ],
+    [
+      90,
+      38,
+      0,
+      8,
+      0,
+      "LATENT"
+    ],
+    [
+      95,
+      48,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      96,
+      49,
+      0,
+      12,
+      2,
+      "VAE"
+    ],
+    [
+      97,
+      49,
+      0,
+      48,
+      0,
+      "*"
+    ],
+    [
+      100,
+      14,
+      0,
+      38,
+      0,
+      "MODEL"
+    ],
+    [
+      101,
+      8,
+      0,
+      63,
+      0,
+      "IMAGE"
+    ],
+    [
+      102,
+      63,
+      0,
+      26,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "Basic_SVD_workflow",
+      "bounding": [
+        -866,
+        -404,
+        417,
+        80
+      ],
+      "color": "#3f789e",
+      "font_size": 42,
+      "flags": {}
+    },
+    {
+      "title": "Group",
+      "bounding": [
+        1390,
+        152,
+        293,
+        274
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "title": "VideoLinearCFGGuidance_Group",
+      "bounding": [
+        117,
+        -104,
+        371,
+        497
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "title": "Video_Combine_Group",
+      "bounding": [
+        2412,
+        -17,
+        737,
+        983
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "title": "Interpolation_Group",
+      "bounding": [
+        1789,
+        28,
+        554,
+        420
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "title": "KSampler_Group",
+      "bounding": [
+        926,
+        -110,
+        402,
+        1333
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "title": "SVD_img2vid_Conditioning_Group",
+      "bounding": [
+        116,
+        483,
+        385,
+        641
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "title": "Image_Only_Checkpoint_Loader_(img2vid model)_Group",
+      "bounding": [
+        -857,
+        138,
+        701,
+        212
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "title": "Load_Image_Group",
+      "bounding": [
+        -854,
+        611,
+        653,
+        431
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "title": "Load_VAE_Group",
+      "bounding": [
+        -859,
+        1142,
+        668,
+        292
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.4177248169415692,
+      "offset": {
+        "0": 1319.487548828125,
+        "1": 924.5169067382812
+      }
+    }
+  },
+  "version": 0.4
+}
