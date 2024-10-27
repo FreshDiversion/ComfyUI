@@ -163,7 +163,8 @@ function provisioning_get_nodes() {
 
 function provisioning_get_default_workflow() {
     if [[ -n $DEFAULT_WORKFLOW ]]; then
-        workflow_json=$(curl -s "$DEFAULT_WORKFLOW")
+        #workflow_json=$(curl -s "$DEFAULT_WORKFLOW")
+        workflow_json=$(curl -s "https://github.com/FreshDiversion/ComfyUI/blob/main/workflows/video/cogvideox_I2V_example_01_workflow.json")
         if [[ -n $workflow_json ]]; then
             echo "export const defaultGraph = $workflow_json;" > /opt/ComfyUI/web/scripts/defaultGraph.js
         fi
