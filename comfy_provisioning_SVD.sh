@@ -6,7 +6,7 @@
 
 # Packages are installed after nodes so we can fix them...
 
-DEFAULT_WORKFLOW="https://github.com/FreshDiversion/ComfyUI/blob/main/workflows/video/Basic_SVD_vast_workflow.json"
+DEFAULT_WORKFLOW="https://raw.githubusercontent.com/FreshDiversion/ComfyUI/refs/heads/main/workflows/video/Basic_SVD_vast_workflow.json"
 
 APT_PACKAGES=(
     #"package-1"
