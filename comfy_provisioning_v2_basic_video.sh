@@ -31,8 +31,8 @@ NODES=(
     "https://github.com/Fannovel16/comfyui_controlnet_aux"
     "https://github.com/kijai/ComfyUI-KJNodes"
     "https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet"
-    "https://github.com/Fannovel16/comfyui_controlnet_aux"
     "https://github.com/AInseven/ComfyUI-fastblend"
+    "https://github.com/Fannovel16/ComfyUI-Frame-Interpolation"
 
 )
 
