@@ -55,7 +55,7 @@ UNET_MODELS=(
 LORA_MODELS=(
     #"https://civitai.com/api/download/models/16576"
     #more obscure loras here -> https://huggingface.co/babyduck123/for_vast/tree/main/lora
-    "https://huggingface.co/babyduck123/for_vast/resolve/main/lora/SD%201.5%20LCM%20LoRA.safetensors"
+    "https://huggingface.co/latent-consistency/lcm-lora-sdv1-5/resolve/main/pytorch_lora_weights.safetensors"
 )
 
 VAE_MODELS=(
