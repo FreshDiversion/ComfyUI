@@ -54,7 +54,23 @@ UNET_MODELS=(
 LORA_MODELS=(
     #"https://civitai.com/api/download/models/16576"
     #more obscure loras here -> https://huggingface.co/babyduck123/for_vast/tree/main/lora
+    #LCM LOrA DONT UNCOMMENT ESSENTIAL TO WORKFLOW
     "https://huggingface.co/latent-consistency/lcm-lora-sdv1-5/resolve/main/pytorch_lora_weights.safetensors"
+    
+    #add more details https://civitai.com/models/82098/add-more-details-detail-enhancer-tweaker-lora
+    "https://civitai.com/api/download/models/87153?type=Model&format=SafeTensor"
+    
+    # epi_noiseoffset https://civitai.com/models/13941/epinoiseoffset
+    "https://civitai.com/api/download/models/16576?type=Model&format=SafeTensor&size=full&fp=fp16"
+    
+    #Ronald McDonald https://civitai.com/models/165085/ronald-mcdonald trigger: ronaldmcdonald clown red hair
+    "https://civitai.com/api/download/models/185865?type=Model&format=SafeTensor"
+    
+    #Better Watercolor painting https://civitai.com/models/79715/better-watercolor-painting-in-the-style-of-iris-compiet trigger:IrisCompiet
+    "https://civitai.com/api/download/models/84535?type=Model&format=SafeTensor"
+    
+    #KIDS ILLUSTRATION https://civitai.com/models/60724/kids-illustration trigger: NONE
+    "https://civitai.com/api/download/models/67980?type=Model&format=SafeTensor"
 )
 
 VAE_MODELS=(
