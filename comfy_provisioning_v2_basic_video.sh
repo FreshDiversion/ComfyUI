@@ -26,7 +26,6 @@ NODES=(
     "https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes"
     "https://github.com/WASasquatch/was-node-suite-comfyui"
     #workflow specific
-    #"https://github.com/ltdrdata/ComfyUI-Impact-Pack"
     "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
     "https://github.com/Fannovel16/comfyui_controlnet_aux"
     "https://github.com/kijai/ComfyUI-KJNodes"
