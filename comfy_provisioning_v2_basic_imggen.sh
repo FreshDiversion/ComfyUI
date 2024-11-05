@@ -19,12 +19,16 @@ PIP_PACKAGES=(
 )
 
 NODES=(
+    #standard    
     "https://github.com/ltdrdata/ComfyUI-Manager"
     "https://github.com/cubiq/ComfyUI_essentials"
     "https://github.com/rgthree/rgthree-comfy"
     "https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes"
     "https://github.com/WASasquatch/was-node-suite-comfyui"
-    #"https://github.com/ltdrdata/ComfyUI-Impact-Pack"
+    "https://github.com/cubiq/ComfyUI_IPAdapter_plus"
+    #workflow specific
+    "https://github.com/Fannovel16/comfyui_controlnet_aux"
+    "https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet"
 
 
 )
@@ -50,13 +54,29 @@ UNET_MODELS=(
 )
 
 LORA_MODELS=(
-    #"https://civitai.com/api/download/models/16576"
+    #add more details https://civitai.com/models/82098/add-more-details-detail-enhancer-tweaker-lora
+    "https://civitai.com/api/download/models/87153?type=Model&format=SafeTensor"
+    
+    # epi_noiseoffset https://civitai.com/models/13941/epinoiseoffset
+    "https://civitai.com/api/download/models/16576?type=Model&format=SafeTensor&size=full&fp=fp16"
+    
+    #Ronald McDonald https://civitai.com/models/165085/ronald-mcdonald trigger: ronaldmcdonald clown red hair
+    "https://civitai.com/api/download/models/185865?type=Model&format=SafeTensor"
+    
+    #Better Watercolor painting https://civitai.com/models/79715/better-watercolor-painting-in-the-style-of-iris-compiet trigger:IrisCompiet
+    "https://civitai.com/api/download/models/84535?type=Model&format=SafeTensor"
+    
+    #KIDS ILLUSTRATION https://civitai.com/models/60724/kids-illustration trigger: NONE
+    "https://civitai.com/api/download/models/67980?type=Model&format=SafeTensor"
+
+    #Comically Large Spoon https://civitai.com/models/93222/comically-large-spoon-or-concept-lora trigger:ComicallyLargeSpoon
+    "https://civitai.com/api/download/models/99396?type=Model&format=SafeTensor"
 )
 
 VAE_MODELS=(
-    "https://huggingface.co/stabilityai/sd-vae-ft-ema-original/resolve/main/vae-ft-ema-560000-ema-pruned.safetensors"
+    #"https://huggingface.co/stabilityai/sd-vae-ft-ema-original/resolve/main/vae-ft-ema-560000-ema-pruned.safetensors"
     "https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors"
-    "https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors"
+    #"https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors"
 )
 
 ESRGAN_MODELS=(
@@ -68,13 +88,13 @@ ESRGAN_MODELS=(
 CONTROLNET_MODELS=(
     #"https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffusers_xl_canny_mid.safetensors"
     #"https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffusers_xl_depth_mid.safetensors?download"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_canny-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_depth-fp16.safetensors"
+    "https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_canny-fp16.safetensors"
+    "https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_depth-fp16.safetensors"
     #"https://huggingface.co/kohya-ss/ControlNet-diff-modules/resolve/main/diff_control_sd15_depth_fp16.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_hed-fp16.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_mlsd-fp16.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_normal-fp16.safetensors"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_openpose-fp16.safetensors"
+    "https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_openpose-fp16.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_scribble-fp16.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_seg-fp16.safetensors"
     
