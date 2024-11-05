@@ -25,8 +25,9 @@ NODES=(
     "https://github.com/rgthree/rgthree-comfy"
     "https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes"
     "https://github.com/WASasquatch/was-node-suite-comfyui"
-    "https://github.com/cubiq/ComfyUI_IPAdapter_plus"
+    
     #workflow specific
+    #"https://github.com/cubiq/ComfyUI_IPAdapter_plus"
     "https://github.com/Fannovel16/comfyui_controlnet_aux"
     "https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet"
 
