@@ -6,7 +6,7 @@
 
 # Packages are installed after nodes so we can fix them...
 
-#DEFAULT_WORKFLOW="https://..."
+DEFAULT_WORKFLOW="https://raw.githubusercontent.com/FreshDiversion/ComfyUI/refs/heads/main/workflows/video/vid2vid_vastai_v2_workflow.json"
 
 APT_PACKAGES=(
     #"package-1"
