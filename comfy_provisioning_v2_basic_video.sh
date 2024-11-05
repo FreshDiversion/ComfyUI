@@ -6,7 +6,7 @@
 
 # Packages are installed after nodes so we can fix them...
 
-DEFAULT_WORKFLOW="https://raw.githubusercontent.com/FreshDiversion/ComfyUI/refs/heads/main/workflows/video/vid2vid_vastai_v2_workflow.json"
+DEFAULT_WORKFLOW="https://github.com/FreshDiversion/ComfyUI/blob/main/workflows/video/vid2vid_vast_workflow.json"
 
 APT_PACKAGES=(
     #"package-1"
@@ -74,7 +74,7 @@ CONTROLNET_MODELS=(
     # more models here -> https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/tree/main
     #"https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffusers_xl_canny_mid.safetensors"
     #"https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffusers_xl_depth_mid.safetensors?download"
-    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_canny-fp16.safetensors"
+    "https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_canny-fp16.safetensors"
     "https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_depth-fp16.safetensors"
     #"https://huggingface.co/kohya-ss/ControlNet-diff-modules/resolve/main/diff_control_sd15_depth_fp16.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_hed-fp16.safetensors"
