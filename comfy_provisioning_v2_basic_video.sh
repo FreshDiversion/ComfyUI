@@ -25,6 +25,7 @@ NODES=(
     "https://github.com/rgthree/rgthree-comfy"
     "https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes"
     "https://github.com/WASasquatch/was-node-suite-comfyui"
+    "https://github.com/cubiq/ComfyUI_IPAdapter_plus"
     #workflow specific
     "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
     "https://github.com/Fannovel16/comfyui_controlnet_aux"
@@ -52,8 +53,7 @@ UNET_MODELS=(
 )
 
 LORA_MODELS=(
-    #"https://civitai.com/api/download/models/16576"
-    #more obscure loras here -> https://huggingface.co/babyduck123/for_vast/tree/main/lora
+
     #LCM LOrA DONT UNCOMMENT ESSENTIAL TO WORKFLOW
     "https://huggingface.co/latent-consistency/lcm-lora-sdv1-5/resolve/main/pytorch_lora_weights.safetensors"
     
@@ -71,6 +71,9 @@ LORA_MODELS=(
     
     #KIDS ILLUSTRATION https://civitai.com/models/60724/kids-illustration trigger: NONE
     "https://civitai.com/api/download/models/67980?type=Model&format=SafeTensor"
+
+    #Comically Large Spoon https://civitai.com/models/93222/comically-large-spoon-or-concept-lora trigger:ComicallyLargeSpoon
+    "https://civitai.com/api/download/models/99396?type=Model&format=SafeTensor"
 )
 
 VAE_MODELS=(
