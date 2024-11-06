@@ -8,6 +8,8 @@
 
 DEFAULT_WORKFLOW="https://github.com/FreshDiversion/ComfyUI/blob/main/workflows/video/vid2vid_contronet_vast_workflow.json"
 
+#https://civitai.com/models/241928/ghibli-style-plant-growth
+
 APT_PACKAGES=(
     #"package-1"
     #"package-2"
