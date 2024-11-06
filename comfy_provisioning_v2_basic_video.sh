@@ -79,6 +79,9 @@ LORA_MODELS=(
 
     #Art Nouveau Style https://civitai.com/models/182980/art-nouveau-style trigger:art nouveau, alphonse mucha, ivan bilibin
     "https://civitai.com/api/download/models/875868?type=Model&format=SafeTensor"
+
+    #muppet mania https://civitai.com/models/68262/muppetmaniaai-konyconi trigger:MuppetManiaAI
+    "https://civitai.com/api/download/models/72944?type=Model&format=SafeTensor"
 )
 
 VAE_MODELS=(
