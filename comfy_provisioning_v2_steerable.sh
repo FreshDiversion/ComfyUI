@@ -49,6 +49,8 @@ NODES=(
     "https://github.com/jamesWalker55/comfyui-various"
     "https://github.com/bash-j/mikey_nodes"
     "https://github.com/alt-key-project/comfyui-dream-project"
+    "https://github.com/SuperBeastsAI/ComfyUI-SuperBeasts"
+    "https://github.com/kijai/ComfyUI-Marigold"
 
 )
 
