@@ -41,6 +41,15 @@ NODES=(
     #UltimateSDUpscale
     "https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
 
+    "https://github.com/ltdrdata/ComfyUI-Impact-Pack"
+    "https://github.com/jags111/efficiency-nodes-comfyui"
+    "https://github.com/BadCafeCode/masquerade-nodes-comfyui"
+    "https://github.com/melMass/comfy_mtb"
+    "https://github.com/FizzleDorf/ComfyUI_FizzNodes"
+    "https://github.com/jamesWalker55/comfyui-various"
+    "https://github.com/bash-j/mikey_nodes"
+    "https://github.com/alt-key-project/comfyui-dream-project"
+
 )
 
 CHECKPOINT_MODELS=(
