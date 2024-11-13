@@ -47,7 +47,7 @@ NODES=(
     "https://github.com/melMass/comfy_mtb"
     "https://github.com/FizzleDorf/ComfyUI_FizzNodes"
     "https://github.com/jamesWalker55/comfyui-various"
-    "https://github.com/bash-j/mikey_nodes"
+    #"https://github.com/bash-j/mikey_nodes"
     "https://github.com/alt-key-project/comfyui-dream-project"
     "https://github.com/SuperBeastsAI/ComfyUI-SuperBeasts"
     "https://github.com/kijai/ComfyUI-Marigold"
@@ -63,6 +63,8 @@ CHECKPOINT_MODELS=(
     "https://civitai.com/api/download/models/125771?type=Model&format=SafeTensor&size=pruned&fp=fp16"
     #dreamshaper8
     "https://civitai.com/api/download/models/128713?type=Model&format=SafeTensor&size=pruned&fp=fp16"
+    #Photon - LCM https://civitai.com/models/306814/photon-lcm
+    "https://civitai.com/api/download/models/344398?type=Model&format=SafeTensor&size=pruned&fp=fp16"
 
 )
 
@@ -164,6 +166,10 @@ CONTROLNET_MODELS=(
 )
 
 CLIP_MODELS=(
+    #"https://huggingface.co/h94/IP-Adapter/resolve/main/models/image_encoder/model.safetensors"
+)
+
+CLIP_VISION_MODELS=(
     "https://huggingface.co/h94/IP-Adapter/resolve/main/models/image_encoder/model.safetensors"
 )
 
@@ -173,9 +179,8 @@ IPADAPTER_MODELS=(
 
 ANIMATE_DIFF_MODELS=(
     #https://huggingface.co/guoyww/animatediff/tree/cd71ae134a27ec6008b968d6419952b0c0494cf2
-    #v3_sd15_adapter.ckpt 
-    "https://huggingface.co/guoyww/animatediff/resolve/cd71ae134a27ec6008b968d6419952b0c0494cf2/v3_sd15_adapter.ckpt"
-    "https://huggingface.co/guoyww/animatediff/resolve/cd71ae134a27ec6008b968d6419952b0c0494cf2/v3_sd15_mm.ckpt"
+    #v3_sd15_mm.ckpt 
+    "https://huggingface.co/guoyww/animatediff/resolve/cd71ae134a27ec6008b968d6419952b0c0494cf2/v3_sd15_mm.ckpt?download=true"
 )
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
@@ -212,6 +217,9 @@ function provisioning_start() {
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/clip" \
         "${CLIP_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/clip_vision" \
+        "${CLIP_VISION_MODELS[@]}"
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/ipadapter" \
         "${IPADAPTER_MODELS[@]}"
