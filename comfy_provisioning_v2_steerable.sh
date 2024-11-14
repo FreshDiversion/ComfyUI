@@ -41,7 +41,7 @@ NODES=(
     #UltimateSDUpscale
     "https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
 
-    "https://github.com/ltdrdata/ComfyUI-Impact-Pack"
+    #"https://github.com/ltdrdata/ComfyUI-Impact-Pack"
     "https://github.com/jags111/efficiency-nodes-comfyui"
     "https://github.com/BadCafeCode/masquerade-nodes-comfyui"
     "https://github.com/melMass/comfy_mtb"
