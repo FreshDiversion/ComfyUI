@@ -180,7 +180,7 @@ IPADAPTER_MODELS=(
 ANIMATE_DIFF_MODELS=(
     #https://huggingface.co/guoyww/animatediff/tree/cd71ae134a27ec6008b968d6419952b0c0494cf2
     #v3_sd15_mm.ckpt 
-    "https://huggingface.co/guoyww/animatediff/resolve/cd71ae134a27ec6008b968d6419952b0c0494cf2/v3_sd15_mm.ckpt?download=true"
+    "https://huggingface.co/guoyww/animatediff/resolve/main/v3_sd15_mm.ckpt"
 )
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
