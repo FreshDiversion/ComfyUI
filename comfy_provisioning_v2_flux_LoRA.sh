@@ -62,7 +62,7 @@ LORA_MODELS=(
     #Flux Skin Texture https://civitai.com/models/651043/flux-skin-texture Trigger: realskin
     "https://civitai.com/api/download/models/827325?type=Model&format=SafeTensor"
     #Flux vividizer | Flux enhancer https://civitai.com/models/663742/flux-vividizer-or-flux-enhancer Trigger:NONE
-    https://civitai.com/api/download/models/742813?type=Model&format=SafeTensor
+    "https://civitai.com/api/download/models/742813?type=Model&format=SafeTensor"
     #Flux surrealism https://civitai.com/models/686591/flux-surrealism Trigger: evangsurreal
     "https://civitai.com/api/download/models/768409?type=Model&format=SafeTensor"
     #FLUX CHROMA KEY https://civitai.com/models/716860/flux-chroma-key Trigger: ohwx_greenscreen
