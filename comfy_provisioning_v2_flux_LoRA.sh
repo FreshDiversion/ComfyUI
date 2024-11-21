@@ -6,22 +6,6 @@
 
 # Packages are installed after nodes so we can fix them...
 
-#DEFAULT_WORKFLOW="https://..."
-
-APT_PACKAGES=(
-    #"package-1"
-    #"package-2"
-)
-
-PIP_PACKAGES=(
-    #"package-1"#!/bin/bash
-
-# This file will be sourced in init.sh
-
-# https://raw.githubusercontent.com/ai-dock/comfyui/main/config/provisioning/default.sh
-
-# Packages are installed after nodes so we can fix them...
-
 DEFAULT_WORKFLOW="https://raw.githubusercontent.com/ai-dock/comfyui/main/config/workflows/flux-comfyui-example.json"
 
 APT_PACKAGES=(
@@ -33,6 +17,7 @@ PIP_PACKAGES=(
     #"package-1"
     #"package-2"
 )
+
 
 NODES=(
     "https://github.com/rgthree/rgthree-comfy"
